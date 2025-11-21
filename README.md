@@ -6,21 +6,21 @@ It was prepared to address reviewer requirements regarding reproducibility, clar
 ---
 
 ## Repository Structure
-
+```
 baitstick-analysis/
-├── DATA/ # Sample images for testing (reviewer request)
+├── DATA/ # Sample images for testing 
 │ ├── example1.jpg
 │ ├── example2.jpg
 │ └── ...
 │
 ├── REQUIREMENTS/
-│ ├── requirements.txt # pip dependencies (reviewer request)
-│ └── requirements.yml # conda environment file (reviewer request)
+│ ├── requirements.txt # pip dependencies 
+│ └── requirements.yml # conda environment file
 │
 ├── strip_cutting.py # Stage 1: crop + split baitstick into strips
 ├── Image_analysis_Activity_Calculation.py # Stage 2: hole detection + activity
 └── README.md # Documentation
-
+```
 ---
 
 ##  Requirements
