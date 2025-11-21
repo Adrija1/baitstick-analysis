@@ -26,15 +26,15 @@ baitstick-analysis/
 ##  Requirements
 
 This project requires Python 3.8–3.12.  
-Install dependencies using either pip or conda.
+Install dependencies using either pip or conda.  
 
 ### Using pip
-pip install -r REQUIREMENTS/requirements.txt
+pip install -r REQUIREMENTS/requirements.txt  
 
 ### Using conda
 Linux/macOS:
-conda env create -f REQUIREMENTS/requirements.yml
-conda activate baitstick-analysis
+conda env create -f REQUIREMENTS/requirements.yml  
+conda activate baitstick-analysis  
 
 Windows:
 conda env create -f REQUIREMENTS\requirements.yml
@@ -48,17 +48,17 @@ python strip_cutting.py \
     --crop-out examples/Cropped \
     --strip-out examples/Strips
 ```
-```
-This script:
 
-crops full bait lamina photographs
+This script:  
 
-splits them into individual strips
+crops full bait lamina photographs  
 
-classifies each strip as "w" (white) or "g" (gray)
+splits them into individual strips  
 
-Outputs are saved into Cropped and Strips folders.
-```
+classifies each strip as "w" (white) or "g" (gray)  
+
+Outputs are saved into Cropped and Strips folders.  
+
 
 **Stage 2 — Detect Holes & Compute Activity**
 ```
@@ -67,6 +67,7 @@ python Image_analysis_Activity_Calculation.py \
     --out examples/Annotated \
     --results examples/results.xlsx \
     --per-hole-csv examples/per_hole.csv
+```
 This script:
   i. detects the 16 feeding holes per strip
   ii. computes continuous feeding fraction for each hole
@@ -74,16 +75,16 @@ This script:
   iv. outputs annotated images with detection rings
   v. exports per-strip and per-hole tables
   vi. Outputs are saved into Annotated, results.xlsx, and per_hole.csv.
-```
-**Features**
-```
-Robust hole detection tuned for bait lamina dimensions
-Continuous feeding fraction (0–1 scale)
-Masks false detections on strip edges
-Right-edge protection to avoid false circles
 
-Supports JPG/PNG/TIFF images
-Reproducible and reviewer-friendly structure
-```
+**Features**
+
+Robust hole detection tuned for bait lamina dimensions  
+Continuous feeding fraction (0–1 scale)  
+Masks false detections on strip edges  
+Right-edge protection to avoid false circles  
+
+Supports JPG/PNG/TIFF images  
+Reproducible and reviewer-friendly structure  
+
 **Contact**
 For questions or collaboration, please contact the repository author (adrijaroy1994@gmail.com).
