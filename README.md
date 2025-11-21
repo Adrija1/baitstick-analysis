@@ -57,13 +57,15 @@ pip install -r REQUIREMENTS/requirements.txt
 
 ### Using conda
 Linux/macOS:
+```
 conda env create -f REQUIREMENTS/requirements.yml  
 conda activate baitstick-analysis  
-
+```
 Windows:
+```
 conda env create -f REQUIREMENTS\requirements.yml
 conda activate baitstick-analysis
-
+```
 **Usage**
 **Stage 1 — Split & Crop Strips**
 ```
