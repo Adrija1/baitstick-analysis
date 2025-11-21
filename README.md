@@ -49,16 +49,11 @@ python strip_cutting.py \
     --strip-out examples/Strips
 ```
 
-This script:  
-
-crops full bait lamina photographs  
-
-splits them into individual strips  
-
-classifies each strip as "w" (white) or "g" (gray)  
-
-Outputs are saved into Cropped and Strips folders.  
-
+This script:
+    i. crops full bait lamina photographs  
+    ii. splits them into individual strips  
+    iii. classifies each strip as "w" (white) or "g" (gray)  
+    iv. Outputs are saved into Cropped and Strips folders.  
 
 **Stage 2 — Detect Holes & Compute Activity**
 ```
