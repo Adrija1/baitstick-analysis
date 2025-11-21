@@ -63,23 +63,28 @@ python Image_analysis_Activity_Calculation.py \
     --results examples/results.xlsx \
     --per-hole-csv examples/per_hole.csv
 ```
-This script:
-  i. detects the 16 feeding holes per strip
-  ii. computes continuous feeding fraction for each hole
-  iii. computes total activity per strip
-  iv. outputs annotated images with detection rings
-  v. exports per-strip and per-hole tables
-  vi. Outputs are saved into Annotated, results.xlsx, and per_hole.csv.
 
-**Features**
+This script:  
+- detects 16 feeding holes per strip  
+- computes **continuous feeding fraction** per hole  
+- calculates total activity per strip  
+- draws detection rings on output images  
+- exports **per-strip** and **per-hole** tables  
+- saves results in **Annotated/**, `results.xlsx`, and `per_hole.csv`
 
-Robust hole detection tuned for bait lamina dimensions  
-Continuous feeding fraction (0–1 scale)  
-Masks false detections on strip edges  
-Right-edge protection to avoid false circles  
+---
 
-Supports JPG/PNG/TIFF images  
-Reproducible and reviewer-friendly structure  
+## Features
 
-**Contact**
-For questions or collaboration, please contact the repository author (adrijaroy1994@gmail.com).
+- Accurate circle detection tuned for bait-lamina geometry  
+- Continuous feeding fraction (0–1 scale)  
+- Right-edge masking removes false detections  
+- Supports JPG / PNG / TIFF  
+- Fully reproducible structure for peer review  
+
+---
+
+## Contact  
+For issues or collaboration, email: **adrijaroy1994@gmail.com**
+
+---
