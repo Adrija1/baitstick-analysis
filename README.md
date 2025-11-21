@@ -42,11 +42,13 @@ conda activate baitstick-analysis
 
 **Usage**
 **Stage 1 — Split & Crop Strips**
-
+```
 python strip_cutting.py \
     --in examples/Images \
     --crop-out examples/Cropped \
     --strip-out examples/Strips
+```
+```
 This script:
 
 crops full bait lamina photographs
@@ -56,9 +58,10 @@ splits them into individual strips
 classifies each strip as "w" (white) or "g" (gray)
 
 Outputs are saved into Cropped and Strips folders.
+```
 
 **Stage 2 — Detect Holes & Compute Activity**
-
+```
 python Image_analysis_Activity_Calculation.py \
     --in examples/Strips \
     --out examples/Annotated \
@@ -71,8 +74,9 @@ This script:
   iv. outputs annotated images with detection rings
   v. exports per-strip and per-hole tables
   vi. Outputs are saved into Annotated, results.xlsx, and per_hole.csv.
-
+```
 **Features**
+```
 Robust hole detection tuned for bait lamina dimensions
 Continuous feeding fraction (0–1 scale)
 Masks false detections on strip edges
@@ -80,6 +84,6 @@ Right-edge protection to avoid false circles
 
 Supports JPG/PNG/TIFF images
 Reproducible and reviewer-friendly structure
-
+```
 **Contact**
 For questions or collaboration, please contact the repository author (adrijaroy1994@gmail.com).
