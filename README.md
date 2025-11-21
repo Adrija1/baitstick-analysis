@@ -9,9 +9,33 @@ It was prepared to address reviewer requirements regarding reproducibility, clar
 ```
 baitstick-analysis/
 ├── DATA/ # Sample images for testing 
-│ ├── example1.jpg
-│ ├── example2.jpg
-│ └── ...
+│ ├── Images
+│   ├── 20250826_155709.jpg
+│   ├── 20250826_161616.jpg
+│ ├── Cropped
+│   ├── 20250826_155709-cropped.jpg
+│   ├── 20250826_161616-cropped.jpg
+│ ├── Strips
+│     ├── 20250826_155709/
+│     │     ├── 20250826_155709-s1-g.jpg
+│     │     ├── 20250826_155709-s2-g.jpg
+│     │     └── ...
+│     │
+│     ├── 20250826_161616/
+│           ├── 20250826_161616-s1-g.jpg
+│           ├── 20250826_161616-s2-w.jpg
+│           └── ...
+│
+│ ├── Annotated
+│     ├── 20250826_155709/
+│      │     ├── annotated_20250826_155709-s1-g.jpg
+│      │     ├── annotated_20250826_155709-s2-g.jpg
+│      │     └── ...
+│      │
+│      ├── 20250826_161616/
+│            ├── annotated_20250826_161616-s1-w.jpg
+│            ├── annotated_20250826_161616-s2-g.jpg
+│            └── ...
 │
 ├── REQUIREMENTS/
 │ ├── requirements.txt # pip dependencies 
