@@ -67,7 +67,9 @@ conda env create -f REQUIREMENTS\requirements.yml
 conda activate baitstick-analysis
 ```
 **Usage**
-**Stage 1 — Split & Crop Strips**
+**Stage 1 — Split & Crop Strips**  
+The user needs to print the Template provided (Template_Baitsticks.docx) in an A4 sheet, and arrange the baitsticks sequentially on the A4 sheet of template, placed on a Light Table.
+The camera is to be placed to capture the red-line bounded area from 21 cm above surface.
 ```
 python strip_cutting.py \
     --in examples/Images \
