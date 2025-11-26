@@ -147,7 +147,7 @@ def process_strip_image(
     )
 
     # Binary mask for eaten pixels
-    _, binary = cv2.threshold(gray, binary_threshold, 255, cv2.THRESH_BINARY)
+    _, binary = cv2.threshold(gray, binary_threshold-50, 255, cv2.THRESH_BINARY)
     kernel = np.ones((3, 3), np.uint8)
     binary = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel)
 
@@ -168,7 +168,7 @@ def process_strip_image(
             max_x = np.median(circles[:, 1]) + 35
         else:
             min_x = np.median(circles[:, 1]) - 25
-            max_x = np.median(circles[:, 1]) + 20
+            max_x = np.median(circles[:, 1]) + 25
 
         min_y = max(50, np.min(circles[:, 0]))
         max_y = min(1900, np.max(circles[:, 0]))
@@ -181,7 +181,7 @@ def process_strip_image(
         circles1 = np.array(filtered_circles)
         print(f"    Circles after band filter: {len(circles1)}")
 
-        if len(circles1) < 14 or len(circles1) > 20:
+        if len(circles1) < 12 or len(circles1) > 20:
             qa = "fail"
             reason = "circles_offgrid_or_wrong_count"
 
@@ -349,3 +349,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
